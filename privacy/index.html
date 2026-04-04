@@ -276,7 +276,9 @@
             btn.addEventListener('click', () => switchLang(btn.dataset.lang));
         });
         const params = new URLSearchParams(window.location.search);
-        if (params.get('lang') === 'en') switchLang('en');
+        const urlLang = params.get('lang');
+        if (urlLang) { switchLang(urlLang === 'de' ? 'de' : 'en'); }
+        else if (!navigator.language.startsWith('de')) { switchLang('en'); }
     </script>
 </body>
 </html>
