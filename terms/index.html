@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loopli – Nutzungsbedingungen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --color-primary: #6B77FA;
+            --color-bg-primary: #FCFAFA;
+            --color-bg-secondary: #F2EBEB;
+            --color-bg-navbar: #E8EDF5;
+            --color-text-primary: #0D0000;
+            --color-text-secondary: #664847;
+            --color-text-muted: #C6BCBC;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-bg-primary); color: var(--color-text-primary); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(252, 250, 250, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--color-bg-secondary); }
+        .header-inner { max-width: 800px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 36px; width: auto; }
+        .tabs { display: inline-flex; gap: 4px; background: var(--color-bg-navbar); border-radius: 16px; padding: 6px; }
+        .tab { padding: 12px 24px; border-radius: 12px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-decoration: none; transition: all 0.2s ease; white-space: nowrap; cursor: pointer; }
+        .tab:hover:not(.active) { background: var(--color-bg-secondary); }
+        .tab.active { color: var(--color-bg-primary); background: var(--color-primary); font-weight: 600; }
+        .main { max-width: 800px; margin: 0 auto; padding: 48px 24px 96px; }
+        .section-title { font-size: 32px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 8px; }
+        .section-date { font-size: 13px; font-weight: 500; color: var(--color-text-muted); margin-bottom: 32px; }
+        .block { background: var(--color-bg-secondary); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+        .block h3 { font-size: 20px; font-weight: 600; margin-bottom: 14px; color: var(--color-text-primary); }
+        .block p { color: var(--color-text-secondary); margin-bottom: 12px; font-size: 15px; font-weight: 400; }
+        .block p:last-child { margin-bottom: 0; }
+        .block ul { list-style: none; padding: 0; margin: 12px 0; }
+        .block ul li { position: relative; padding-left: 20px; color: var(--color-text-secondary); font-size: 15px; font-weight: 400; margin-bottom: 8px; }
+        .block ul li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary); }
+        .block ul li:last-child { margin-bottom: 0; }
+        .contact-line { color: var(--color-text-secondary); font-size: 15px; font-weight: 400; line-height: 1.8; }
+        .contact-line a { color: var(--color-primary); text-decoration: none; }
+        .contact-line a:hover { text-decoration: underline; }
+        .lang-switcher { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 32px; margin-bottom: 8px; }
+        .lang-switcher button { background: none; border: none; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 500; color: var(--color-text-muted); cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: all 0.2s ease; }
+        .lang-switcher button:hover { color: var(--color-text-secondary); }
+        .lang-switcher button.active { color: var(--color-primary); font-weight: 600; }
+        .lang-switcher .lang-divider { color: var(--color-text-muted); font-size: 13px; user-select: none; }
+        [data-lang="en"] .content-de { display: none; }
+        [data-lang="de"] .content-en { display: none; }
+        .footer { text-align: center; padding: 32px 24px; color: var(--color-text-muted); font-size: 13px; font-weight: 500; border-top: 1px solid var(--color-bg-secondary); }
+        [data-lang="en"] .footer .footer-de { display: none; }
+        [data-lang="de"] .footer .footer-en { display: none; }
+        @media (max-width: 640px) {
+            .header-inner { flex-direction: column; gap: 12px; padding: 12px 16px; }
+            .tabs { justify-content: center; }
+            .tab { padding: 8px 14px; font-size: 12px; }
+            .main { padding: 32px 16px 64px; }
+            .section-title { font-size: 24px; }
+            .block { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="/"><img src="/LogoNew.svg" alt="Loopli" height="36"></a>
+            <nav class="tabs">
+                <a class="tab" href="/imprint/" data-label-de="Impressum" data-label-en="Imprint">Impressum</a>
+                <a class="tab" href="/privacy/" data-label-de="Datenschutz" data-label-en="Privacy">Datenschutz</a>
+                <a class="tab active" href="/terms/" data-label-de="Nutzung" data-label-en="Terms">Nutzung</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="content-de">
+            <h1 class="section-title">Nutzungsbedingungen</h1>
+            <p class="section-date">Stand: Februar 2025</p>
+
+            <div class="block">
+                <p>Willkommen bei Loopli! Diese Nutzungsbedingungen regeln die Nutzung unserer App. Mit der Registrierung akzeptierst du diese Bedingungen.</p>
+            </div>
+
+            <div class="block">
+                <h3>1. Geltungsbereich</h3>
+                <p>Diese Nutzungsbedingungen gelten für die Nutzung der Loopli-App, bereitgestellt von Emma Schildheuer (Einzelunternehmerin), c/o IP-Management #9022, Ludwig-Erhard-Str. 18, 20459 Hamburg, Deutschland.</p>
+            </div>
+
+            <div class="block">
+                <h3>2. Leistungsbeschreibung</h3>
+                <p>Loopli ist eine Lern-App, die auf dem Prinzip der verteilten Wiederholung (Spaced Repetition) basiert. Die App bietet:</p>
+                <ul>
+                    <li>Lerninhalte in verschiedenen Kategorien</li>
+                    <li>Fortschrittsverfolgung mit XP, Levels und Streaks</li>
+                    <li>Eine kostenlose Basisversion</li>
+                    <li>Optionale Premium-Funktionen über ein Abonnement</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>3. Registrierung und Konto</h3>
+                <ul>
+                    <li>Für die Nutzung von Loopli ist eine Registrierung erforderlich. Du kannst dich mit E-Mail und Passwort oder über Apple/Google anmelden.</li>
+                    <li>Du bist verpflichtet, bei der Registrierung wahrheitsgemäße Angaben zu machen.</li>
+                    <li>Du bist für die Sicherheit deines Kontos verantwortlich und darfst deine Zugangsdaten nicht an Dritte weitergeben.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>4. Nutzung durch Minderjährige</h3>
+                <p>Loopli kann auch von Minderjährigen genutzt werden. Bei Nutzern unter 16 Jahren empfehlen wir die Zustimmung eines Erziehungsberechtigten. In-App-Käufe erfordern bei Minderjährigen die Zustimmung der Erziehungsberechtigten.</p>
+            </div>
+
+            <div class="block">
+                <h3>5. Kostenlose und Premium-Leistungen</h3>
+                <ul>
+                    <li>Die Basisversion von Loopli ist kostenlos nutzbar.</li>
+                    <li>Premium-Funktionen sind über ein Abonnement erhältlich, das über den Apple App Store oder Google Play Store abgewickelt wird.</li>
+                    <li>Es gelten die jeweiligen Bedingungen von Apple bzw. Google für In-App-Käufe und Abonnements.</li>
+                    <li>Abonnements können jederzeit über die jeweilige Plattform gekündigt werden.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>6. Nutzungsrechte und -pflichten</h3>
+                <p>Du erhältst ein nicht-exklusives, nicht übertragbares Recht zur persönlichen Nutzung der App.</p>
+                <p>Es ist untersagt:</p>
+                <ul>
+                    <li>Die App zu dekompilieren oder zurückzuentwickeln</li>
+                    <li>Die App für kommerzielle Zwecke zu nutzen</li>
+                    <li>Die App für illegale Aktivitäten zu verwenden</li>
+                    <li>Den Betrieb der App zu stören oder zu beeinträchtigen</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>7. Inhalte und geistiges Eigentum</h3>
+                <ul>
+                    <li>Alle Inhalte der App, einschließlich Fragen, Texte, Grafiken und Software, sind urheberrechtlich geschützt und Eigentum von Loopli.</li>
+                    <li>Nutzer können keine eigenen Inhalte hochladen. Profilbilder dienen ausschließlich der persönlichen Identifikation.</li>
+                    <li>Einige Lerninhalte werden mithilfe von künstlicher Intelligenz erstellt.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>8. Änderungen und Verfügbarkeit</h3>
+                <ul>
+                    <li>Wir behalten uns das Recht vor, die App jederzeit zu ändern, zu erweitern oder einzuschränken.</li>
+                    <li>Lerninhalte, Kategorien, XP-Werte und andere Spielelemente können angepasst werden.</li>
+                    <li>Die App wird ohne Garantie auf ständige Verfügbarkeit bereitgestellt. Wartungsarbeiten und technische Störungen können zu vorübergehenden Ausfällen führen.</li>
+                    <li>Es besteht kein Anspruch auf bestimmte Funktionen oder Inhalte.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>9. Haftungsbeschränkung</h3>
+                <ul>
+                    <li>Loopli gibt keine Garantie für Lernerfolge. Die App ist ein Hilfsmittel zum Lernen, ersetzt aber keine professionelle Ausbildung.</li>
+                    <li>Wir bemühen uns um korrekte Inhalte, übernehmen aber keine Gewähr für inhaltliche Fehler.</li>
+                    <li>Die Haftung für leichte Fahrlässigkeit ist ausgeschlossen, soweit keine wesentlichen Vertragspflichten oder Schäden an Leben, Körper oder Gesundheit betroffen sind.</li>
+                    <li>Die Haftung ist auf vorhersehbare, vertragstypische Schäden begrenzt.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>10. Kündigung und Kontolöschung</h3>
+                <ul>
+                    <li>Du kannst dein Konto jederzeit in den App-Einstellungen löschen. Dabei werden alle deine Daten dauerhaft entfernt.</li>
+                    <li>Wir können den Nutzungsvertrag mit einer Frist von 14 Tagen kündigen.</li>
+                    <li>Bei schwerwiegenden Verstößen gegen diese Nutzungsbedingungen können wir das Konto sofort sperren oder löschen.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>11. Sperrung von Konten</h3>
+                <p>Wir behalten uns das Recht vor, Konten bei Missbrauch oder Verstößen gegen diese Nutzungsbedingungen vorübergehend oder dauerhaft zu sperren. Gründe können sein:</p>
+                <ul>
+                    <li>Manipulation von Lernfortschritten oder Spielelementen</li>
+                    <li>Verstoß gegen diese Nutzungsbedingungen</li>
+                    <li>Verdacht auf illegale Aktivitäten</li>
+                    <li>Verhalten, das anderen Nutzern oder dem Dienst schadet</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>12. Schlussbestimmungen</h3>
+                <ul>
+                    <li>Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts.</li>
+                    <li>Änderungen dieser Nutzungsbedingungen werden dir mitgeteilt. Die weitere Nutzung nach Inkrafttreten gilt als Zustimmung.</li>
+                    <li>Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>13. Kontakt</h3>
+                <p>Bei Fragen zu diesen Nutzungsbedingungen kontaktiere uns unter: <a href="mailto:emma.schildheuer@outlook.de">emma.schildheuer@outlook.de</a></p>
+            </div>
+        </div>
+
+        <div class="content-en">
+            <h1 class="section-title">Terms of Use</h1>
+            <p class="section-date">Last updated: February 2025</p>
+
+            <div class="block">
+                <p>Welcome to Loopli! These terms of use govern the use of our app. By registering, you accept these terms.</p>
+            </div>
+
+            <div class="block">
+                <h3>1. Scope</h3>
+                <p>These terms of use apply to the use of the Loopli app, provided by Emma Schildheuer (sole proprietor), c/o IP-Management #9022, Ludwig-Erhard-Str. 18, 20459 Hamburg, Germany.</p>
+            </div>
+
+            <div class="block">
+                <h3>2. Service Description</h3>
+                <p>Loopli is a learning app based on the principle of spaced repetition. The app offers:</p>
+                <ul>
+                    <li>Learning content in various categories</li>
+                    <li>Progress tracking with XP, levels, and streaks</li>
+                    <li>A free basic version</li>
+                    <li>Optional premium features via subscription</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>3. Registration and Account</h3>
+                <ul>
+                    <li>Registration is required to use Loopli. You can sign up with email and password or via Apple/Google.</li>
+                    <li>You are required to provide truthful information during registration.</li>
+                    <li>You are responsible for the security of your account and must not share your credentials with third parties.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>4. Use by Minors</h3>
+                <p>Loopli can also be used by minors. For users under 16 years of age, we recommend parental consent. In-app purchases by minors require parental consent.</p>
+            </div>
+
+            <div class="block">
+                <h3>5. Free and Premium Services</h3>
+                <ul>
+                    <li>The basic version of Loopli is free to use.</li>
+                    <li>Premium features are available through a subscription processed via the Apple App Store or Google Play Store.</li>
+                    <li>The respective terms of Apple or Google apply to in-app purchases and subscriptions.</li>
+                    <li>Subscriptions can be cancelled at any time through the respective platform.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>6. Usage Rights and Obligations</h3>
+                <p>You receive a non-exclusive, non-transferable right to personal use of the app.</p>
+                <p>It is prohibited to:</p>
+                <ul>
+                    <li>Decompile or reverse-engineer the app</li>
+                    <li>Use the app for commercial purposes</li>
+                    <li>Use the app for illegal activities</li>
+                    <li>Disrupt or interfere with the operation of the app</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>7. Content and Intellectual Property</h3>
+                <ul>
+                    <li>All content in the app, including questions, texts, graphics, and software, is protected by copyright and owned by Loopli.</li>
+                    <li>Users cannot upload their own content. Profile pictures serve solely for personal identification.</li>
+                    <li>Some learning content is created with the help of artificial intelligence.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>8. Changes and Availability</h3>
+                <ul>
+                    <li>We reserve the right to change, expand, or restrict the app at any time.</li>
+                    <li>Learning content, categories, XP values, and other game elements may be adjusted.</li>
+                    <li>The app is provided without guarantee of constant availability. Maintenance and technical issues may lead to temporary outages.</li>
+                    <li>There is no entitlement to specific features or content.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>9. Limitation of Liability</h3>
+                <ul>
+                    <li>Loopli does not guarantee learning success. The app is a learning aid and does not replace professional education.</li>
+                    <li>We strive for accurate content but do not guarantee the absence of errors.</li>
+                    <li>Liability for slight negligence is excluded, unless essential contractual obligations or damages to life, body, or health are affected.</li>
+                    <li>Liability is limited to foreseeable, contract-typical damages.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>10. Termination and Account Deletion</h3>
+                <ul>
+                    <li>You can delete your account at any time in the app settings. All your data will be permanently removed.</li>
+                    <li>We may terminate the user agreement with 14 days' notice.</li>
+                    <li>In case of serious violations of these terms, we may immediately suspend or delete the account.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>11. Account Suspension</h3>
+                <p>We reserve the right to temporarily or permanently suspend accounts in case of misuse or violations of these terms. Reasons may include:</p>
+                <ul>
+                    <li>Manipulation of learning progress or game elements</li>
+                    <li>Violation of these terms of use</li>
+                    <li>Suspected illegal activities</li>
+                    <li>Behavior that harms other users or the service</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>12. Final Provisions</h3>
+                <ul>
+                    <li>German law applies, excluding the UN Convention on Contracts for the International Sale of Goods.</li>
+                    <li>Changes to these terms will be communicated to you. Continued use after changes take effect constitutes acceptance.</li>
+                    <li>If individual provisions are invalid, the validity of the remaining provisions remains unaffected.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                <h3>13. Contact</h3>
+                <p>If you have questions about these terms of use, contact us at: <a href="mailto:emma.schildheuer@outlook.de">emma.schildheuer@outlook.de</a></p>
+            </div>
+        </div>
+
+        <div class="lang-switcher">
+            <button data-lang="de" class="active">DE</button>
+            <span class="lang-divider">|</span>
+            <button data-lang="en">EN</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span class="footer-de">&copy; 2025 Loopli – Emma Schildheuer. Alle Rechte vorbehalten.</span>
+        <span class="footer-en">&copy; 2025 Loopli – Emma Schildheuer. All rights reserved.</span>
+    </footer>
+
+    <script>
+        let currentLang = 'de';
+        function switchLang(lang) {
+            currentLang = lang;
+            document.documentElement.setAttribute('data-lang', lang);
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelectorAll('.lang-switcher button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+            document.querySelectorAll('.tab').forEach(t => t.textContent = t.getAttribute('data-label-' + lang));
+            const url = new URL(window.location);
+            if (lang === 'de') { url.searchParams.delete('lang'); } else { url.searchParams.set('lang', lang); }
+            window.history.replaceState(null, '', url);
+        }
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                if (currentLang !== 'de') {
+                    e.preventDefault();
+                    const url = new URL(tab.href, window.location.origin);
+                    url.searchParams.set('lang', currentLang);
+                    window.location.href = url.toString();
+                }
+            });
+        });
+        document.querySelectorAll('.lang-switcher button').forEach(btn => {
+            btn.addEventListener('click', () => switchLang(btn.dataset.lang));
+        });
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('lang') === 'en') switchLang('en');
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loopli – Impressum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --color-primary: #6B77FA;
+            --color-bg-primary: #FCFAFA;
+            --color-bg-secondary: #F2EBEB;
+            --color-bg-navbar: #E8EDF5;
+            --color-text-primary: #0D0000;
+            --color-text-secondary: #664847;
+            --color-text-muted: #C6BCBC;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-bg-primary); color: var(--color-text-primary); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .header { position: sticky; top: 0; z-index: 100; background: rgba(252, 250, 250, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid var(--color-bg-secondary); }
+        .header-inner { max-width: 800px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
+        .logo img { height: 36px; width: auto; }
+        .tabs { display: inline-flex; gap: 4px; background: var(--color-bg-navbar); border-radius: 16px; padding: 6px; }
+        .tab { padding: 12px 24px; border-radius: 12px; font-size: 14px; font-weight: 500; color: var(--color-text-primary); text-decoration: none; transition: all 0.2s ease; white-space: nowrap; cursor: pointer; }
+        .tab:hover:not(.active) { background: var(--color-bg-secondary); }
+        .tab.active { color: var(--color-bg-primary); background: var(--color-primary); font-weight: 600; }
+        .main { max-width: 800px; margin: 0 auto; padding: 48px 24px 96px; }
+        .section-title { font-size: 32px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 8px; }
+        .section-date { font-size: 13px; font-weight: 500; color: var(--color-text-muted); margin-bottom: 32px; }
+        .block { background: var(--color-bg-secondary); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
+        .block h3 { font-size: 20px; font-weight: 600; margin-bottom: 14px; color: var(--color-text-primary); }
+        .block p { color: var(--color-text-secondary); margin-bottom: 12px; font-size: 15px; font-weight: 400; }
+        .block p:last-child { margin-bottom: 0; }
+        .contact-line { color: var(--color-text-secondary); font-size: 15px; font-weight: 400; line-height: 1.8; }
+        .contact-line a { color: var(--color-primary); text-decoration: none; }
+        .contact-line a:hover { text-decoration: underline; }
+        .divider { height: 1px; background: var(--color-text-muted); opacity: 0.4; margin: 16px 0; }
+        .lang-switcher { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 32px; margin-bottom: 8px; }
+        .lang-switcher button { background: none; border: none; font-family: 'Poppins', sans-serif; font-size: 13px; font-weight: 500; color: var(--color-text-muted); cursor: pointer; padding: 4px 8px; border-radius: 6px; transition: all 0.2s ease; }
+        .lang-switcher button:hover { color: var(--color-text-secondary); }
+        .lang-switcher button.active { color: var(--color-primary); font-weight: 600; }
+        .lang-switcher .lang-divider { color: var(--color-text-muted); font-size: 13px; user-select: none; }
+        [data-lang="en"] .content-de { display: none; }
+        [data-lang="de"] .content-en { display: none; }
+        .footer { text-align: center; padding: 32px 24px; color: var(--color-text-muted); font-size: 13px; font-weight: 500; border-top: 1px solid var(--color-bg-secondary); }
+        [data-lang="en"] .footer .footer-de { display: none; }
+        [data-lang="de"] .footer .footer-en { display: none; }
+        @media (max-width: 640px) {
+            .header-inner { flex-direction: column; gap: 12px; padding: 12px 16px; }
+            .tabs { justify-content: center; }
+            .tab { padding: 8px 14px; font-size: 12px; }
+            .main { padding: 32px 16px 64px; }
+            .section-title { font-size: 24px; }
+            .block { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="/"><img src="/LogoNew.svg" alt="Loopli" height="36"></a>
+            <nav class="tabs">
+                <a class="tab active" href="/imprint/" data-label-de="Impressum" data-label-en="Imprint">Impressum</a>
+                <a class="tab" href="/privacy/" data-label-de="Datenschutz" data-label-en="Privacy">Datenschutz</a>
+                <a class="tab" href="/terms/" data-label-de="Nutzung" data-label-en="Terms">Nutzung</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="content-de">
+            <h1 class="section-title">Impressum</h1>
+            <p class="section-date">Angaben gemäß § 5 DDG (ehemals § 5 TMG)</p>
+
+            <div class="block">
+                <h3>Betreiberin</h3>
+                <div class="contact-line">
+                    Emma Schildheuer<br>
+                    Einzelunternehmerin<br>
+                    c/o IP-Management #9022<br>
+                    Ludwig-Erhard-Str. 18<br>
+                    20459 Hamburg<br>
+                    Deutschland
+                </div>
+                <div class="divider"></div>
+                <div class="contact-line">
+                    E-Mail: <a href="mailto:emma.schildheuer@outlook.de">emma.schildheuer@outlook.de</a>
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>Umsatzsteuer</h3>
+                <p>Gemäß § 19 UStG wird keine Umsatzsteuer erhoben (Kleinunternehmerregelung).</p>
+            </div>
+
+            <div class="block">
+                <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+                <p>Anschrift wie oben.</p>
+            </div>
+        </div>
+
+        <div class="content-en">
+            <h1 class="section-title">Legal Notice</h1>
+            <p class="section-date">Information pursuant to § 5 DDG (formerly § 5 TMG)</p>
+
+            <div class="block">
+                <h3>Operator</h3>
+                <div class="contact-line">
+                    Emma Schildheuer<br>
+                    Sole Proprietor<br>
+                    c/o IP-Management #9022<br>
+                    Ludwig-Erhard-Str. 18<br>
+                    20459 Hamburg<br>
+                    Germany
+                </div>
+                <div class="divider"></div>
+                <div class="contact-line">
+                    Email: <a href="mailto:emma.schildheuer@outlook.de">emma.schildheuer@outlook.de</a>
+                </div>
+            </div>
+
+            <div class="block">
+                <h3>VAT</h3>
+                <p>In accordance with § 19 UStG, no VAT is charged (small business regulation).</p>
+            </div>
+
+            <div class="block">
+                <h3>Responsible for content pursuant to § 18 (2) MStV</h3>
+                <p>Address as stated above.</p>
+            </div>
+        </div>
+
+        <div class="lang-switcher">
+            <button data-lang="de" class="active">DE</button>
+            <span class="lang-divider">|</span>
+            <button data-lang="en">EN</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span class="footer-de">&copy; 2025 Loopli – Emma Schildheuer. Alle Rechte vorbehalten.</span>
+        <span class="footer-en">&copy; 2025 Loopli – Emma Schildheuer. All rights reserved.</span>
+    </footer>
+
+    <script>
+        let currentLang = 'de';
+
+        function switchLang(lang) {
+            currentLang = lang;
+            document.documentElement.setAttribute('data-lang', lang);
+            document.documentElement.setAttribute('lang', lang);
+            document.querySelectorAll('.lang-switcher button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+            document.querySelectorAll('.tab').forEach(t => t.textContent = t.getAttribute('data-label-' + lang));
+            const url = new URL(window.location);
+            if (lang === 'de') { url.searchParams.delete('lang'); } else { url.searchParams.set('lang', lang); }
+            window.history.replaceState(null, '', url);
+        }
+
+        // Preserve lang param when clicking tabs
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                if (currentLang !== 'de') {
+                    e.preventDefault();
+                    const url = new URL(tab.href, window.location.origin);
+                    url.searchParams.set('lang', currentLang);
+                    window.location.href = url.toString();
+                }
+            });
+        });
+
+        document.querySelectorAll('.lang-switcher button').forEach(btn => {
+            btn.addEventListener('click', () => switchLang(btn.dataset.lang));
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('lang') === 'en') switchLang('en');
+    </script>
+</body>
+</html>
