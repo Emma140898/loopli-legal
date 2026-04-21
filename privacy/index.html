@@ -40,6 +40,11 @@
         .block ul li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--color-primary); }
         .block ul li:last-child { margin-bottom: 0; }
         .sub-label { display: inline-block; font-size: 13px; font-weight: 600; color: var(--color-primary); margin-bottom: 4px; }
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 12px 0; border-radius: 10px; background: var(--color-bg-primary); }
+        .block table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        .block th, .block td { text-align: left; padding: 10px 12px; color: var(--color-text-secondary); vertical-align: top; }
+        .block th { font-weight: 600; color: var(--color-text-primary); background: var(--color-bg-navbar); font-size: 13px; white-space: nowrap; }
+        .block tr:not(:last-child) td { border-bottom: 1px solid var(--color-bg-secondary); }
         .contact-line { color: var(--color-text-secondary); font-size: 15px; font-weight: 400; line-height: 1.8; }
         .contact-line a { color: var(--color-primary); text-decoration: none; }
         .contact-line a:hover { text-decoration: underline; }
@@ -79,7 +84,7 @@
     <main class="main">
         <div class="content-de">
             <h1 class="section-title">Datenschutzerklärung</h1>
-            <p class="section-date">Stand: Februar 2025</p>
+            <p class="section-date">Stand: April 2026</p>
 
             <div class="block">
                 <p>Der Schutz deiner persönlichen Daten ist uns wichtig. Diese Datenschutzrichtlinie erklärt, welche Daten wir erheben, warum wir sie erheben und welche Rechte du hast.</p>
@@ -113,13 +118,90 @@
                 <p><span class="sub-label">Supabase (Backend & Authentifizierung)</span><br>
                 Wir nutzen Supabase für Authentifizierung und Datenspeicherung. Deine Daten werden auf EU-Servern gespeichert. Datenschutzrichtlinie: supabase.com/privacy</p>
                 <p><span class="sub-label">PostHog (Analyse)</span><br>
-                Wir nutzen PostHog zur Analyse der App-Nutzung. PostHog wird auf EU-Servern gehostet und erhebt anonymisierte Daten. Datenschutzrichtlinie: posthog.com/privacy</p>
+                Wir nutzen PostHog zur Analyse der App-Nutzung, um die Benutzererfahrung zu verbessern. PostHog verarbeitet Ereignisdaten, die mit einer automatisch generierten Geräte-ID (Device ID) verknüpft sind. Es werden keine direkten User-IDs an PostHog übermittelt. Die Daten werden nicht für Werbezwecke, Profiling oder personalisierte Werbung verwendet, sondern ausschließlich zur Verbesserung der App-Funktionalität. PostHog wird auf EU-Servern gehostet. Datenschutzrichtlinie: posthog.com/privacy</p>
                 <p><span class="sub-label">RevenueCat (Abonnements)</span><br>
                 Für Abonnements nutzen wir RevenueCat. RevenueCat verarbeitet Kaufdaten über den Apple App Store und Google Play Store. Datenschutzrichtlinie: revenuecat.com/privacy</p>
                 <p><span class="sub-label">Google & Apple Anmeldung</span><br>
-                Wenn du dich mit Google oder Apple anmeldest, erhalten wir deine E-Mail-Adresse und deinen Namen von diesen Diensten. Wir erhalten nicht dein Passwort.</p>
+                Wenn du dich mit Google oder Apple anmeldest, erhalten wir ausschließlich die für die Authentifizierung notwendigen Daten.</p>
+                <p>Von Google erhalten wir:</p>
+                <ul>
+                    <li>E-Mail-Adresse</li>
+                    <li>Vor- und Nachname</li>
+                    <li>OAuth-Token (nur für Login)</li>
+                </ul>
+                <p>Von Apple erhalten wir:</p>
+                <ul>
+                    <li>E-Mail-Adresse (optional, ggf. anonymisiert)</li>
+                    <li>Vor- und Nachname (nur beim ersten Login)</li>
+                    <li>OAuth-Token (nur für Login)</li>
+                </ul>
+                <p>Diese Daten werden ausschließlich zur Kontoerstellung und Anmeldung verwendet. Eine Weitergabe an Dritte erfolgt nicht. Die in der App verwendeten Nutzernamen werden aus dem Vornamen und einer zufälligen Zahl generiert und stehen in keinem Zusammenhang mit anderen Datenquellen.</p>
                 <p><span class="sub-label">Push-Benachrichtigungen</span><br>
                 Falls aktiviert, werden Push-Benachrichtigungen über Apple Push Notification Service (iOS) oder Firebase Cloud Messaging (Android) gesendet. Wir speichern einen Geräte-Token, um Push-Benachrichtigungen zu senden.</p>
+            </div>
+
+            <div class="block">
+                <h3>3.1 Tracking und App Tracking Transparency (ATT)</h3>
+                <p>Wir verknüpfen keine Daten mit Daten anderer Apps oder Websites für Werbezwecke. Es findet kein Cross-App- oder Cross-Company-Tracking statt.</p>
+                <p>Die in dieser App erhobenen Daten werden ausschließlich zur Bereitstellung, Analyse und Verbesserung der App-Funktionalität verwendet.</p>
+                <p>Wir nutzen keine Daten, um Nutzer über verschiedene Unternehmen oder Anwendungen hinweg zu verfolgen oder personalisierte Werbung außerhalb unserer App zu ermöglichen.</p>
+                <p>Daher ist App Tracking Transparency (ATT) für diese App nicht erforderlich, da kein Tracking im Sinne der Definition von Apple stattfindet.</p>
+            </div>
+
+            <div class="block">
+                <h3>3.2 Data Sharing</h3>
+                <p>Wir geben personenbezogene Daten nur an Dienstleister weiter, die als Auftragsverarbeiter in unserem Auftrag handeln:</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Anbieter</th>
+                                <th>Geteilte Daten</th>
+                                <th>Zweck</th>
+                                <th>Rolle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Supabase</td>
+                                <td>E-Mail, Name, User-ID, Lernpräferenzen</td>
+                                <td>Backend & Authentifizierung</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>PostHog</td>
+                                <td>Ereignisdaten (ohne User-ID)</td>
+                                <td>Produktanalyse</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>RevenueCat</td>
+                                <td>User-ID, Kaufdaten</td>
+                                <td>Subscription-Management</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>Firebase (FCM)</td>
+                                <td>Device Token</td>
+                                <td>Push Notifications</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>Google</td>
+                                <td>OAuth-Token (nur Authentifizierung)</td>
+                                <td>Login</td>
+                                <td>Identity Provider</td>
+                            </tr>
+                            <tr>
+                                <td>Apple</td>
+                                <td>OAuth-Token (nur Authentifizierung)</td>
+                                <td>Login</td>
+                                <td>Identity Provider</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Wir verkaufen keine personenbezogenen Daten und geben keine Daten zu Werbezwecken oder gegen finanzielle Gegenleistung an Dritte weiter.</p>
             </div>
 
             <div class="block">
@@ -174,7 +256,7 @@
 
         <div class="content-en">
             <h1 class="section-title">Privacy Policy</h1>
-            <p class="section-date">Last updated: February 2025</p>
+            <p class="section-date">Last updated: April 2026</p>
 
             <div class="block">
                 <p>Protecting your personal data is important to us. This privacy policy explains what data we collect, why we collect it, and what rights you have.</p>
@@ -208,13 +290,90 @@
                 <p><span class="sub-label">Supabase (Backend & Authentication)</span><br>
                 We use Supabase for authentication and data storage. Your data is stored on EU servers. Privacy policy: supabase.com/privacy</p>
                 <p><span class="sub-label">PostHog (Analytics)</span><br>
-                We use PostHog to analyze app usage. PostHog is hosted on EU servers and collects anonymized data. Privacy policy: posthog.com/privacy</p>
+                We use PostHog to analyze app usage in order to improve the user experience. PostHog processes event data linked to an automatically generated device ID. No direct user IDs are shared with PostHog. The data is not used for advertising, profiling, or personalized advertising, but solely to improve app functionality. PostHog is hosted on EU servers. Privacy policy: posthog.com/privacy</p>
                 <p><span class="sub-label">RevenueCat (Subscriptions)</span><br>
                 For subscriptions, we use RevenueCat. RevenueCat processes purchase data through the Apple App Store and Google Play Store. Privacy policy: revenuecat.com/privacy</p>
                 <p><span class="sub-label">Google & Apple Sign-In</span><br>
-                If you sign in with Google or Apple, we receive your email address and name from these services. We do not receive your password.</p>
+                When signing in with Google or Apple, we only receive the data required for authentication.</p>
+                <p>From Google we receive:</p>
+                <ul>
+                    <li>Email address</li>
+                    <li>First and last name</li>
+                    <li>OAuth token (login only)</li>
+                </ul>
+                <p>From Apple we receive:</p>
+                <ul>
+                    <li>Email address (optional, may be anonymized)</li>
+                    <li>First and last name (only during initial login)</li>
+                    <li>OAuth token (login only)</li>
+                </ul>
+                <p>This data is used solely for account creation and authentication. It is not shared with third parties. Usernames used in the app are generated from the first name and a random number and are not linked to other data sources.</p>
                 <p><span class="sub-label">Push Notifications</span><br>
                 If enabled, push notifications are sent via Apple Push Notification Service (iOS) or Firebase Cloud Messaging (Android). We store a device token to send push notifications.</p>
+            </div>
+
+            <div class="block">
+                <h3>3.1 Tracking and App Tracking Transparency (ATT)</h3>
+                <p>We do not link data with data from other apps or websites for advertising purposes. There is no cross-app or cross-company tracking.</p>
+                <p>The data collected within this app is used solely to provide, analyze, and improve app functionality.</p>
+                <p>We do not use data to track users across apps or companies or to enable personalized advertising outside of our app.</p>
+                <p>Therefore, App Tracking Transparency (ATT) is not required for this app, as no tracking in the sense defined by Apple takes place.</p>
+            </div>
+
+            <div class="block">
+                <h3>3.2 Data Sharing</h3>
+                <p>We only share personal data with service providers acting as data processors on our behalf:</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Provider</th>
+                                <th>Shared Data</th>
+                                <th>Purpose</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Supabase</td>
+                                <td>Email, name, user ID, learning preferences</td>
+                                <td>Backend & authentication</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>PostHog</td>
+                                <td>Event data (without user ID)</td>
+                                <td>Product analytics</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>RevenueCat</td>
+                                <td>User ID, purchase data</td>
+                                <td>Subscription management</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>Firebase (FCM)</td>
+                                <td>Device token</td>
+                                <td>Push notifications</td>
+                                <td>Data Processor</td>
+                            </tr>
+                            <tr>
+                                <td>Google</td>
+                                <td>OAuth token (authentication only)</td>
+                                <td>Login</td>
+                                <td>Identity Provider</td>
+                            </tr>
+                            <tr>
+                                <td>Apple</td>
+                                <td>OAuth token (authentication only)</td>
+                                <td>Login</td>
+                                <td>Identity Provider</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>We do not sell personal data and do not share data with third parties for advertising purposes or financial compensation.</p>
             </div>
 
             <div class="block">
